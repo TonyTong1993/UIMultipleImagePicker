@@ -13,6 +13,7 @@
 		EB914C1B1F1CBC09003FC124 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB914C191F1CBC09003FC124 /* Main.storyboard */; };
 		EB914C1D1F1CBC09003FC124 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB914C1C1F1CBC09003FC124 /* Assets.xcassets */; };
 		EB914C201F1CBC09003FC124 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB914C1E1F1CBC09003FC124 /* LaunchScreen.storyboard */; };
+		EB914C3C1F1CDBAF003FC124 /* TYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB914C3B1F1CDBAF003FC124 /* TYBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,12 @@
 		EB914C1C1F1CBC09003FC124 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB914C1F1F1CBC09003FC124 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB914C211F1CBC09003FC124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB914C361F1CDB5B003FC124 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		EB914C371F1CDB5B003FC124 /* ConstDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstDefine.h; sourceTree = "<group>"; };
+		EB914C381F1CDB5B003FC124 /* FunctionDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionDefines.h; sourceTree = "<group>"; };
+		EB914C391F1CDB5B003FC124 /* iPhoneVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneVersion.h; sourceTree = "<group>"; };
+		EB914C3A1F1CDBAF003FC124 /* TYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYBaseViewController.h; sourceTree = "<group>"; };
+		EB914C3B1F1CDBAF003FC124 /* TYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 		EB914C0F1F1CBC09003FC124 /* UIMultipleImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				EB914C2E1F1CD9FB003FC124 /* LLImagePickerController */,
 				EB914C131F1CBC09003FC124 /* AppDelegate.h */,
 				EB914C141F1CBC09003FC124 /* AppDelegate.m */,
 				EB914C161F1CBC09003FC124 /* ViewController.h */,
@@ -77,6 +85,67 @@
 				EB914C111F1CBC09003FC124 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB914C2E1F1CD9FB003FC124 /* LLImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				EB914C2F1F1CDA2B003FC124 /* Classes */,
+			);
+			path = LLImagePickerController;
+			sourceTree = "<group>";
+		};
+		EB914C2F1F1CDA2B003FC124 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EB914C321F1CDA6C003FC124 /* Module */,
+				EB914C311F1CDA4B003FC124 /* Common */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EB914C311F1CDA4B003FC124 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EB914C351F1CDAEE003FC124 /* Global */,
+				EB914C341F1CDAD5003FC124 /* Base */,
+				EB914C331F1CDAAC003FC124 /* AppGenernal */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EB914C321F1CDA6C003FC124 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EB914C331F1CDAAC003FC124 /* AppGenernal */ = {
+			isa = PBXGroup;
+			children = (
+				EB914C361F1CDB5B003FC124 /* Config.h */,
+				EB914C371F1CDB5B003FC124 /* ConstDefine.h */,
+				EB914C381F1CDB5B003FC124 /* FunctionDefines.h */,
+				EB914C391F1CDB5B003FC124 /* iPhoneVersion.h */,
+			);
+			path = AppGenernal;
+			sourceTree = "<group>";
+		};
+		EB914C341F1CDAD5003FC124 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EB914C3A1F1CDBAF003FC124 /* TYBaseViewController.h */,
+				EB914C3B1F1CDBAF003FC124 /* TYBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EB914C351F1CDAEE003FC124 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB914C3C1F1CDBAF003FC124 /* TYBaseViewController.m in Sources */,
 				EB914C181F1CBC09003FC124 /* ViewController.m in Sources */,
 				EB914C151F1CBC09003FC124 /* AppDelegate.m in Sources */,
 				EB914C121F1CBC09003FC124 /* main.m in Sources */,
@@ -312,6 +382,7 @@
 				EB914C261F1CBC09003FC124 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
