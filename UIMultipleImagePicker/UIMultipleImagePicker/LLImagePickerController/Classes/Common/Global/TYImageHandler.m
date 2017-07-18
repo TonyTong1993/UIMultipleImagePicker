@@ -113,8 +113,15 @@ static CGFloat const kDefaultThumbnailWidth = 100;
 }
 #pragma mark -
 #pragma mark - 获取某一相册下所有图片资源
-/** 获取所有在assetsGroup中的asset(iOS8以下)
+/**
  * @param assetsGroup: 照片群组
+ */
+
+/**
+ 获取所有在assetsGroup中的asset(iOS8以下)
+
+ @param group 相册
+ @param finishBlock 完成后的回掉
  */
 - (void)enumerateAssetsInAssetsGroup:(ALAssetsGroup *)group finishBlock:(void(^)(NSArray <ALAsset *>*result))finishBlock {
     __block NSMutableArray *assets = [NSMutableArray array];
@@ -264,11 +271,11 @@ static CGFloat const kDefaultThumbnailWidth = 100;
             if (size > 1024) {
                 NSInteger integral = size / 1024.0;
                 NSInteger decimal = size % 1024;
-                NSString *decimalString = [NSString stringWithFormat:@"%li",decimal];
+                NSString *decimalString = [NSString stringWithFormat:@"%li",(long)decimal];
                 if(decimal > 100){ //取两位
                     decimalString = [decimalString substringToIndex:2];
                 }
-                sizeString = [NSString stringWithFormat:@"%li.%@M", integral, decimalString];
+                sizeString = [NSString stringWithFormat:@"%li.%@M", (long)integral, decimalString];
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 Block_exe(result, sizeString);

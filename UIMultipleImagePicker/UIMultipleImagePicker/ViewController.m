@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ImageHandler.h"
 #import "Config.h"
 @interface ViewController ()
 
@@ -15,6 +16,17 @@
 @implementation ViewController
 -(void)viewDidLoad {
     [super viewDidLoad];
-    
+    [ImageHandler requestAuthorization:^(AuthorizationStatus status) {
+        
+    }];
+   ImageHandler *imageHandler = [[ImageHandler alloc] init];
+   
+    [imageHandler enumeratePHAssetCollectionsWithResultHandler:^(NSArray<PHAssetCollection *> *result) {
+        for (PHAssetCollection *collection in result) {
+           [imageHandler enumerateAssetsInGroup:collection finishBlock:^(NSArray *result) {
+               LLog(@"result = %@",result);
+           }];
+        }
+    }];
 }
 @end
